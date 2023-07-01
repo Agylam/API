@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "3998b944-c840-4f5b-9406-b2879b846561",
+		"name": "RFID авторизация",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "14663624-3998b944-c840-4f5b-9406-b2879b846561"
+	},
+	"item": [
+		{
+			"name": "Генерация сессии",
+			"id": "280ca49b-7ab1-4453-bb63-f923435b8a39",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/device/generate_session/6c299457-568e-4009-a3c4-505e4c82e81b",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"device",
+						"generate_session",
+						"6c299457-568e-4009-a3c4-505e4c82e81b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать устройство",
+			"id": "2c695344-a8a4-49de-869b-3dff361817b1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/device/create",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"device",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка токена",
+			"id": "7ded1cfe-0f0a-4c22-bd65-33932a588bb7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"ZDhlNDg4NGItYWMyNS00MTU5LWEwNjctZTkyNWMzYjJlYjRlOjM0QzlEMTgxQUREN0EwOjYyNjY2OjNhYmEwY2IyYzFkYzY0N2MwOTFiNWI3ZjVkOGVlYjY4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/device/check_token/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"device",
+						"check_token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

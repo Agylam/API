@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "0ff4a9f3-a73c-475f-bb9e-db53260b8e8c",
+		"name": "Расписание",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "14663624-0ff4a9f3-a73c-475f-bb9e-db53260b8e8c"
+	},
+	"item": [
+		{
+			"name": "Получение урока",
+			"id": "ca509656-f327-4647-8678-c6ce04d836a1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_time\": \"09:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/schedule/0",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"schedule",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

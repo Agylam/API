@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "5897efb2-509c-4fe0-a9f0-533d05585df0",
+		"name": "Пользователь",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "14663624-5897efb2-509c-4fe0-a9f0-533d05585df0"
+	},
+	"item": [
+		{
+			"name": "Создание",
+			"id": "441c22a3-7d06-467e-8623-2cd7686c8d4d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ball@stest.co\",\r\n    \"password\":\"ball@stest.co\",\r\n    \"fullname\":\"Ball\",\r\n    \"uid\":\"00000000000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/user/create",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Вход",
+			"id": "6b364c14-988b-41be-86c1-d2540406469d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"aekemerov@yandex.ru\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/user/auth",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновление токена",
+			"id": "cde102b3-3274-4851-bded-146730c6c6da",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/user/refresh_token/82c552a8e34dbd2ae04fa70f42f0ec1eea9637ca590071fd31ef6d0823969d87",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"user",
+						"refresh_token",
+						"82c552a8e34dbd2ae04fa70f42f0ec1eea9637ca590071fd31ef6d0823969d87"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "jwt",
+		"jwt": [
+			{
+				"key": "secret",
+				"value": "CHANGE_ME",
+				"type": "string"
+			},
+			{
+				"key": "algorithm",
+				"value": "HS256",
+				"type": "string"
+			},
+			{
+				"key": "isSecretBase64Encoded",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "payload",
+				"value": "{}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "queryParamKey",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "header",
+				"value": "{}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ab0c5f32-0488-4125-a2d1-b2ab56d1f006",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5f199126-81af-46d9-9058-57fbf2855db7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "553c7120-c092-479e-b530-f0de19007378",
+			"key": "HOST",
+			"value": "http://localhost/api",
+			"type": "string"
+		}
+	]
+}
