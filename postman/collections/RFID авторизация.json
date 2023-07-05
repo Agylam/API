@@ -58,7 +58,53 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "64f9c3ab-8bde-4fe9-b9be-a385429d6abe",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/device/create",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"device",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "169"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:22:07 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"uuid\": \"53c94cfd-21a2-4994-8409-870a66673c1d\",\n    \"secret\": \"4HxPpsfia2H4awtoy9K&NBsb*nimt176\",\n    \"updatedAt\": \"2023-07-05T22:22:06.761Z\",\n    \"createdAt\": \"2023-07-05T22:22:06.761Z\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Проверка токена",

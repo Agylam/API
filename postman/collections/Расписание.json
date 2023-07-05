@@ -35,7 +35,62 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "4d68c77e-b762-4f71-9333-d8c464638c05",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_time\": \"09:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/schedule/0",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"schedule",
+								"0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "335"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:21:26 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"start_time\": \"10:00\",\n        \"end_time\": \"11:00\",\n        \"id\": 68,\n        \"start_minute\": 0,\n        \"start_hour\": 10,\n        \"end_minute\": 0,\n        \"end_hour\": 11\n    },\n    {\n        \"start_time\": \"10:06\",\n        \"end_time\": \"11:00\",\n        \"id\": 67,\n        \"start_minute\": 6,\n        \"start_hour\": 10,\n        \"end_minute\": 0,\n        \"end_hour\": 11\n    },\n    {\n        \"start_time\": \"09:00\",\n        \"end_time\": \"05:07\",\n        \"id\": 66,\n        \"start_minute\": 0,\n        \"start_hour\": 9,\n        \"end_minute\": 7,\n        \"end_hour\": 5\n    }\n]"
+				}
+			]
 		}
 	]
 }

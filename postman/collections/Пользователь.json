@@ -35,7 +35,62 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "6b7bd6bb-931d-4b06-b686-b01116ffbb9e",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ball@stest.co\",\r\n    \"password\":\"ball@stest.co\",\r\n    \"fullname\":\"Ball\",\r\n    \"uid\":\"00000000000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/user/create",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "238"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:21:38 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"group_id\": 0,\n    \"id\": 3,\n    \"email\": \"ball@stest.co\",\n    \"password\": \"$2a$10$jSa5wwKubxIohRC6vRTmg.Zb5Twtufx3Yux9fu5YeRf51nzldSuc6\",\n    \"fullname\": \"Ball\",\n    \"uid\": \"00000000000000\",\n    \"updatedAt\": \"2023-07-05T22:21:38.559Z\",\n    \"createdAt\": \"2023-07-05T22:21:38.559Z\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Вход",
@@ -66,7 +121,116 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "b358e44d-3fc4-456d-ba46-bf70ff6b89dd",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aekemerov@yandex.ru\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/user/auth",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"user",
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "341"
+						},
+						{
+							"key": "date",
+							"value": "Sun, 02 Jul 2023 11:48:09 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZWtlbWVyb3ZAeWFuZGV4LnJ1IiwiZnVsbG5hbWUiOiLQnNCw0LvRi9Cz0LjQvSDQkC7QlS4iLCJncm91cF9pZCI6MCwiaWF0IjoxNjg4Mjk4NDg5LCJleHAiOjE2ODgzMDIwODl9.a7wYrWtNkAGkCoQxZn4TyAtXS7dO-XCsjFIF0nUyNJE\",\n    \"refreshToken\": \"f58f926f00ee159c502cc808dfa09e665a68245ba9b11537b87547433aa9db7e\"\n}"
+				},
+				{
+					"id": "b8107c48-35fa-47ad-9889-5def1f823084",
+					"name": "Неверные данные",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aekemerov@yandex.ru\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/user/auth",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"user",
+								"auth"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "date",
+							"value": "Sun, 02 Jul 2023 13:05:33 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Incorrect email or password\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Обновление токена",
@@ -89,7 +253,100 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "32107539-5a5d-45d8-9d5b-cbe428cebe87",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/user/refresh_token/6a7fa22d11e1e6d536fe19cbccb947218bd426117598cf0ac1bd1167a0088427",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"user",
+								"refresh_token",
+								"6a7fa22d11e1e6d536fe19cbccb947218bd426117598cf0ac1bd1167a0088427"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "341"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:20:45 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZWtlbWVyb3ZAeWFuZGV4LnJ1IiwiZnVsbG5hbWUiOiLQnNCw0LvRi9Cz0LjQvSDQkC7QlS4iLCJncm91cF9pZCI6MCwiaWF0IjoxNjg4NTk1NjQ1LCJleHAiOjE2ODg1OTkyNDV9.ofUwtG9GPZz1tgsUXuG0juQ1CrQACXeY1QBspP8UM90\",\n    \"refreshToken\": \"c732915eee482d2ecd52a64ced3f6fd6f3b2809ead32c93508d623cf037a88de\"\n}"
+				},
+				{
+					"id": "1a0de665-e54f-4e50-9736-ebfc81fee0c1",
+					"name": "Некоректный токен",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/user/refresh_token/6a7fa22d11e1e6d536fe19cbccb947218bd426117598cf0ac1bd1167a0088427",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"user",
+								"refresh_token",
+								"6a7fa22d11e1e6d536fe19cbccb947218bd426117598cf0ac1bd1167a0088427"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "35"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:20:57 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Incorrect refresh token\"\n}"
+				}
+			]
 		}
 	],
 	"auth": {
