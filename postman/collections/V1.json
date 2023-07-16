@@ -126,7 +126,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "91c6ea67-4266-4669-99e7-7668247303c3",
+				"id": "99fa4fc5-ff77-4edc-86a0-7f8b4cb5f9fc",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -136,11 +136,11 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "57984ad0-584d-4d5c-b2eb-1b195f091d04",
+				"id": "e63ba0bd-1d09-4516-ae94-120cc2417360",
 				"type": "text/javascript",
 				"exec": [
 					"pm.test(\"HTTP 2XX\", function () {",
-					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 203, 205]);",
 					"});",
 					"",
 					"pm.test(\"Content-Type присутствует\", function () {",
