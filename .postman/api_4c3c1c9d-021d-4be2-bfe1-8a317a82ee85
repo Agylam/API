@@ -9,9 +9,7 @@ id = 4c3c1c9d-021d-4be2-bfe1-8a317a82ee85
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"14663624-3998b944-c840-4f5b-9406-b2879b846561","path":"RFID авторизация.json","metaData":{}}
-files[] = {"id":"14663624-5897efb2-509c-4fe0-a9f0-533d05585df0","path":"Пользователь.json","metaData":{}}
-files[] = {"id":"14663624-0ff4a9f3-a73c-475f-bb9e-db53260b8e8c","path":"Расписание.json","metaData":{}}
+files[] = {"id":"14663624-f9320aee-a28b-4ad3-ae80-7f8850a898c5","path":"v3.json","metaData":{}}
 
 [config.relations.collections.metaData]
 

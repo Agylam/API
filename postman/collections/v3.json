@@ -1,11 +1,143 @@
 {
 	"info": {
-		"_postman_id": "5897efb2-509c-4fe0-a9f0-533d05585df0",
-		"name": "Пользователь",
+		"_postman_id": "f9320aee-a28b-4ad3-ae80-7f8850a898c5",
+		"name": "v3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "14663624-5897efb2-509c-4fe0-a9f0-533d05585df0"
+		"_uid": "14663624-f9320aee-a28b-4ad3-ae80-7f8850a898c5"
 	},
 	"item": [
+		{
+			"name": "Генерация сессии",
+			"id": "280ca49b-7ab1-4453-bb63-f923435b8a39",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/device/generate_session/6c299457-568e-4009-a3c4-505e4c82e81b",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"device",
+						"generate_session",
+						"6c299457-568e-4009-a3c4-505e4c82e81b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать устройство",
+			"id": "2c695344-a8a4-49de-869b-3dff361817b1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/device/create",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"device",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "64f9c3ab-8bde-4fe9-b9be-a385429d6abe",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/device/create",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"device",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "169"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:22:07 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"uuid\": \"53c94cfd-21a2-4994-8409-870a66673c1d\",\n    \"secret\": \"4HxPpsfia2H4awtoy9K&NBsb*nimt176\",\n    \"updatedAt\": \"2023-07-05T22:22:06.761Z\",\n    \"createdAt\": \"2023-07-05T22:22:06.761Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Проверка токена",
+			"id": "7ded1cfe-0f0a-4c22-bd65-33932a588bb7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"ZDhlNDg4NGItYWMyNS00MTU5LWEwNjctZTkyNWMzYjJlYjRlOjM0QzlEMTgxQUREN0EwOjYyNjY2OjNhYmEwY2IyYzFkYzY0N2MwOTFiNWI3ZjVkOGVlYjY4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/device/check_token/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"device",
+						"check_token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "Создание",
 			"id": "441c22a3-7d06-467e-8623-2cd7686c8d4d",
@@ -347,81 +479,92 @@
 					"body": "{\n    \"error\": \"Incorrect refresh token\"\n}"
 				}
 			]
-		}
-	],
-	"auth": {
-		"type": "jwt",
-		"jwt": [
-			{
-				"key": "secret",
-				"value": "CHANGE_ME",
-				"type": "string"
-			},
-			{
-				"key": "algorithm",
-				"value": "HS256",
-				"type": "string"
-			},
-			{
-				"key": "isSecretBase64Encoded",
-				"value": false,
-				"type": "boolean"
-			},
-			{
-				"key": "payload",
-				"value": "{}",
-				"type": "string"
-			},
-			{
-				"key": "addTokenTo",
-				"value": "header",
-				"type": "string"
-			},
-			{
-				"key": "headerPrefix",
-				"value": "Bearer",
-				"type": "string"
-			},
-			{
-				"key": "queryParamKey",
-				"value": "token",
-				"type": "string"
-			},
-			{
-				"key": "header",
-				"value": "{}",
-				"type": "string"
-			}
-		]
-	},
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "ab0c5f32-0488-4125-a2d1-b2ab56d1f006",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
 		},
 		{
-			"listen": "test",
-			"script": {
-				"id": "5f199126-81af-46d9-9058-57fbf2855db7",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"id": "553c7120-c092-479e-b530-f0de19007378",
-			"key": "HOST",
-			"value": "http://localhost/api",
-			"type": "string"
+			"name": "Получение урока",
+			"id": "ca509656-f327-4647-8678-c6ce04d836a1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_time\": \"09:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/schedule/0",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"schedule",
+						"0"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "4d68c77e-b762-4f71-9333-d8c464638c05",
+					"name": "Успешно",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_time\": \"09:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/schedule/0",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"schedule",
+								"0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "335"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 05 Jul 2023 22:21:26 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"start_time\": \"10:00\",\n        \"end_time\": \"11:00\",\n        \"id\": 68,\n        \"start_minute\": 0,\n        \"start_hour\": 10,\n        \"end_minute\": 0,\n        \"end_hour\": 11\n    },\n    {\n        \"start_time\": \"10:06\",\n        \"end_time\": \"11:00\",\n        \"id\": 67,\n        \"start_minute\": 6,\n        \"start_hour\": 10,\n        \"end_minute\": 0,\n        \"end_hour\": 11\n    },\n    {\n        \"start_time\": \"09:00\",\n        \"end_time\": \"05:07\",\n        \"id\": 66,\n        \"start_minute\": 0,\n        \"start_hour\": 9,\n        \"end_minute\": 7,\n        \"end_hour\": 5\n    }\n]"
+				}
+			]
 		}
 	]
 }
